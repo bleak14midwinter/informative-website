@@ -1,0 +1,348 @@
+
+<!doctype html><!--HTML5 doctype declaration -->
+<html lang="en"><!--default language of the document content -->
+	
+    <head>
+        <title>Learning Journal - Introduction to Web Development</title><!--web page title -->
+		<meta charset="utf-8"><!--character encoding for the document (Unicode) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/stylesheet.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300"    rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab" rel     ="stylesheet">
+		<link rel="icon" type="image/ico" href="images/favicon.ico">
+
+  
+	<script src="mainjs.js" defer></script>
+	</head>
+
+<body>
+<!--Markup all web page content inside the 'body' tags -->
+	<a id="top"></a>
+	<div id="wrapperGrid">
+	<!--The 'wrapper' contains all the page content-->
+    <header class ="banner"><!--The main heading for the page -->
+		<h1>Learning Journal</h1>
+		<h2>How to make a responsive website</h2>
+	</header>
+	
+    <nav class="menu"><!--The primary navigation for the page -->
+	<ul>
+		<li>Learning Journal</li>
+		<li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="contact.html">Contact me</a></li>
+	</ul>
+	</nav>
+	
+	<nav>
+    	<!--Secondary page navigation -->
+			<h2>Navigation</h2>
+				<ol>
+					<li><a href="#week1">Getting started</a></li>
+					<li><a href="#week1">Learning more tags</a></li>
+					<li><a href="#week3">Lists and tables</a></li>
+					<li><a href="#week5">Basics of CSS</a></li>
+					<li><a href="#week5">Adding more CSS</a></li>
+					<li><a href="#week6">Responsive Design</a></li>
+					<li><a href="#week7">Flexible media</a></li>
+					<li><a href="#week8">Flexbox and multi-column</a></li>
+					<li><a href="#week9">Adding a form</a></li>
+                    <li><a href="#refs">References</a></li>
+                    <li><a href="#table">Timetable</a></li>
+				</ol>
+		</nav>
+    
+    <main><!--The main page content -->
+        
+        	<h2>Weekly Posts</h2>
+
+        	 <article>
+        	    <header class="post">
+        	        <h3><a id="week9"></a>Week 9 - Forms in HTML and CSS</h3>
+					<p>Posted on <time datetime="2023-12-02"><strong>December 2, 2023</strong></time></p>
+        	    </header>
+        	    <p>In webpages, to collect data from users and send them to the website, forms are used. This week, in my contact page I put in a form. They are a vital component in any ineractive website, and are created in HTML and styled in CSS. There are many HTML form elements which I found out about in the following link: <a href="http://24ways.org/2009/have-a-field-day-with-html5-forms">24 WAYS - Have a Field Day with HTML5 Forms</a>.</p>
+        	        <p>Below is my contact form after I finished adding form elements to the HTML.</p>
+                <img src="images/formBefore.png" class = "border" alt = "Picture of contact form before CSS">
+                <p>In HTML forms, data that the user has entered can be validated by checking its the right type and if it is entered in the required fields. Also as you can see in my screenshot, placeholder text can be used to show users how to fill in a form text box.</p>
+                <p>Forms use many elements so I did an extensive amount of styling in CSS. I found <a href="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons/">this</a> online tutorial very useful when I changed the default style of elements</p>
+                <p>Underneath you can see my finished contact form after I styled it in CSS</p>
+                <img src="images/formAfter.png" class = "border" alt = "Picture of contact form before CSS">
+                <div class="important">
+                <h4>Independent research - Long word breaking</h4>
+                <img src="images/WordBreakBefore.png" class = "img-wrap-right-small" alt="Word break before change"/>
+                <p>When playing around with the developer tools on Google Chrome by resizing the webpage to emulate small devices, testing its responsiveness, I found a problem. Long words, or really only long URLs would not make the webpage to resize properly, as the text would be too long and uninterupted for an entire width of a line, making it not a responsive web design. This is seen in the image on the right.</p>
+                <div class="clear"></div>
+                <img src="images/WordBreakAfter.png" class = "img-wrap-left-small" alt="Word break after change"/>
+                <p>After reading about the CSS <code>word-break</code> property on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break">MDN Web Docs</a>, I found that <code>body { word-break: break-word; }</code> fixed the issue. This cause long URLs to be broken up onto different lines, as seen in the picture on the left, causing my webpage to become responsive on devices with small screens.</p>
+                </div>
+        	    <p><a href="#top">Back to top of page</a></p>
+        	</article>
+        	
+            <article>
+        	    <header class="post">
+        	        <h3><a id="week8"></a>Week 8 - CSS flexbox and multi-column responsive layout</h3>
+					<p>Posted on <time datetime="2023-11-25"><strong>November 25, 2023</strong></time></p>
+        	    </header>
+        	    <p>This week I added some content to my tutorial page on study tips during lockdown, and then tried 2 new ways of laying out content in a responsive web page for the tutorial page, the <strong>CSS3 flexbox layout</strong> and the <strong>CSS multi-column layout</strong>. My tutorial page has content with multiple steps, which I hope to layout using the 'card' interface design which you can find out more about here: <a href="https://www.smashingmagazine.com/2016/10/designing-card-based-user-interfaces/">https://www.smashingmagazine.com/2016/10/designing-card-based-user-interfaces/</a>.<br> Underneath is my tutorial page with the new content using the same grid layout as this learning journal page.</p>
+        	    <img src="images/Grid.png" class = "border" alt = "Picture of tutorial page using grid layout">
+        	    <h4>Flexbox layout</h4>
+        	    <p>I used the CSS flexbox property to lay out my tutorial steps as flexible cards in columns, and made the images flexible. In the CSS I used media queries to reduce the number of columns as the viewport width decreases. You can find out more about the flexible box layout <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">here</a>.<br> Below is a picture of my tutorial page with the new content laid out using flexbox.</p>
+        	    <img src="images/Flexbox.png" class = "border" alt = "Picture of tutorial page using flexbox layout"/>
+        	    <h4>Multi-column layout</h4>
+        	    <p>Like the flexbox, I used media queries in the CSS do determine how many columns will be used for different screen widths. Content in the tutorial are laid out in <code>article</code> elements with images that are floated so that text wraps around them. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts">MDN - Using CSS multi-column layout</a> provides more infomation on this layout I implemented in my tutorial page,<br>which you can see here underneath.</p>
+        	    <img src="images/Multi.png" class = "border" alt = "Picture of tutorial page using multi-column layout"/>
+        	    <div class = "important">
+        	    <h4>Comparison - Flexbox vs Multi-column</h4>
+        	    <p>After trying out both the CSS flexbox layout and multi-column layout on my tutorial page with the same content, I came to the conclusion that I will continue to use the flexible box layout. This is becuase it suited my content more, as I had multiple steps which look best is they match the card interface design. </p>
+        	    <img src="images/Flexbox2.png" class = "img-wrap-right-large" alt = "Picture of tutorial page using flexbox with more content"/>
+        	    <p>After adding more content to the tutorial page, I decided to use 3 different sized 'cards' with classes <code>.card-small</code>, <code>.card-medium</code>, <code>.card-large</code>. In the CSS, my media queries how many of each sized card can be adjacent for the device viewing the page.<br>For example, as seen on the right, for desktops and laptops the tutorial page has 4 columns of small cards at the top and a card using the entire width underneath.<br>This ease of flexibilty is another reason that I decided to a flexbox instead of multi-column layout.</p>
+        	    <div class = "clear"></div>
+        	    </div>        	    
+        	    <p><a href="#top">Back to top of page</a></p>
+        	</article>
+        	
+        	<article>
+        	    <header class="post">
+        	        <h3><a id="week7"></a>Week 7 - Making media flexible</h3>
+					<p>Posted on <time datetime="2023-11-18"><strong>November 18, 2023</strong></time></p>
+        	    </header>
+        	    <h4>Clipped and flexible images</h4>
+        	    <p>Underneath is an image with a size similar to a banner and with the property wrapper overflow set to hidden. This means that as the webpage is resized to a shorter width, part of the image will be removed, whilst remaining the same size.</p>
+        	    <header class="img-clipped"><img src="images/dogs.jpg" alt="Picture of dogs"/></header>
+        	    <p>To do this I embed the HTML for the image in a <code>&lt;header</code> which has the <code>class=&quot;img-clipped&quot;&gt;</code>. Then in the CSS i add the following rule: <code>.img-clipped { overflow: hidden; }</code>.</p>
+        	    <p>Now see the same image underneath which is now flexible, meaning that as the viewport is resized smaller, so does the image automatically.</p>
+        	    <img src="images/dogs.jpg" class="img-fluid" alt="Picture of dogs"/>
+        	    <p>I did this by embeding the same image in the HTML with no  <code>height</code> or <code>width</code> attributes in the <code>&lt;img&gt;</code> element, which now has the class <code>class=&quot;img-fluid&quot;</code>. Then add the following CSS rule: <code>.img-fluid { width: 100%; max-width: 900px; }</code> with the <code>max-width</code> being the actual width of the image.</p>
+        	    <img src="images/dog.jpg" class = "img-wrap-left-small" alt="Picture of an adult pug"/>
+                <p>Here is a smaller image with this text being wrapped around it flexibly, where the image can resize. This is done using the <code>float</code> and <code>clear</code> properties in the CSS. First in the HTML the image is given the class <code>class="img-wrap-left-small"</code>. Then the text that you want to be wraped around the image written inside <code>&lt;p&gt;</code> tags in the following line after the image. In the next line in the HTML you write <code>&lt;div class="clear">&lt;/div&gt;</code>, and finally add 2 rules in the CSS: <code>.img-wrap-left-small { float: left; padding: 2%; width: 33%; }</code> and <code>.clear { clear: both; }</code>.<br>The <code>float</code> and <code>width</code> properties can be altered or change in a new class, if you want the image to wrap on the right and/or make up a bigger fraction of the width. For example I made another class <code>img-wrap-right-large</code> which is used for the next wrapping image below.</p>
+                 <div class="clear"></div>
+                 <h4>Flexible videos</h4>
+                 <p>Underneath is a embedded video from YouTube which is in a flexible video container. This means that if the page if resized smaller, the video will shrink as well, whilst maintaining a 16:9 width:height ratio, benefiting the reader of the page.</p>
+                 <div class="video-wrapper">
+                 <div class="video-container">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/47Od-T9IFYM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </div>
+                 </div>
+                 <img src="images/week7screenshot1.png" class = "img-wrap-right-large" alt="Picture showing how to get the HTML code for an embeded YouTube video"/>
+                 <p>To find the HTML that you copy into your webpage to embed a YouTube video, you first need find the video you want to use. Then you press the Share button underneath the video, which then brings up the option for you to press Embed. It will then show the HTML inside <code>&lt;iframe&gt;</code> tags which can be copied over.<br>Also notice how here I have used an image with the class <code>img-wrap-right-large</code>, where in the CSS I styled the image to be 2/3 width and wrap on the right instead.</p>
+                 <div class="clear"></div>                 
+                 <h4>Extra - background images</h4>
+                 <p>All elements in HTML, have a <code>background</code> property that using the CSS, can be styled. Images for decoration, not images for content in the page, can be put into the background of elements, instead of in the HTML using a <code>img</code> tag.</p>
+                 <p class = "background-tiled">Images that are small can be repeated as tiles to form a pattern when they are put in the background of elements. I used this <a href="http://www.stripegenerator.com/">Stripe Generator tool</a> to find a image that is currenty used as a tile for the background image of this <code>&lt;p&gt;</code> element, which this text is written in. I chose this small tile, which is only <code>54 x 45 pixels</code>, because as it is repeating in the <em>x</em> and <em>y</em> axis, it creates a shooting star pattern<br>I did this by giving the above element the class: <code>class = "background-tiled"</code> and adding the following rule to the CSS: <code>.background-tiled { background-image: url(http://www.stripegenerator.com/generators/generate_shared_stripe.php?stripe=3026); }</code>.</p>
+                <p>Because I identified the image souce using its full URL as it hosted on another web server , as I fullback I also declered the property <code>background-color: #666</code>, because it may fail to retrieve the image from the external website.<br>*UPDATE* as explained below this image did fail so I used a non hosted background image: <code>background-image: url(../images/stripe.png);</code>.</p>
+                <p>You can turn of tiling using the property <code>background-repeat: no-repeat;</code> in the background of an element in CSS, if you want to use a single large image instead. You can also secify is you just want the background image of an element repeated vertically or horizontally by using either <code>background-repeat: repeat-x;</code> or <code>background-repeat: repeat-y;</code>.</p>
+                 <p class = "background-fixed">A parallax effect can be created by fixing the position of a background image of an element, meaning that as the page content is scrolled up and down, the background image will remain stationery. As you can see I did this for this <code>&lt;p&gt;</code> element in which this text currently is, by giving it the class: <code>class = "background-fixed"</code> and adding the following rule to the CSS: <code>.background-fixed { background-attachment: fixed; }</code>. However when viewing my webapge on an iPhone 6, the image appeared to scroll as normal, meaning that this property and parallax effect won't work on all devices or browsers, and the image will remian to look like a normal one.</p>
+                <p>Check out this MDN page - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">https://developer.mozilla.org/en-US/docs/Web/CSS/background</a> as it has more infomation on all of the CSS <code>background</code> properties.</p>
+                <h4>Extra - Using a favicon</h4>
+                <p>A <strong>favicon</strong> is a small picture that is shown in browser's address bar or tab, next to the title of your webpage, when it is visited, or may be shown if you favorite or bookmark the page. It can be a finishing touch to your website and is important for branding it, as this website explains: <a href="https://uxplanet.org/web-usability-what-is-favicon-and-how-it-improves-your-website-c94d9be71a59">Web Usability: What Is Favicon and How It Improves Your Website</a>.</p>
+                <p>These links will help you make you own favicon</p>
+                <ul>
+                    <li><a href="http://tools.dynamicdrive.com/favicon/">http://tools.dynamicdrive.com/favicon/</a> - Favicons have there own permited file format, so this tool creates a favicon from an uploaded image.</li>
+                    <li><a href="http://www.favicon.cc/">http://www.favicon.cc/</a>This tool allows you to draw your own favicon. I used colours I already used in my website for consistancy to make this favicon: <img src="images/favicon.ico" alt="My favicon"/></li>
+                </ul>
+                <p>Once I made made my favicon, in the <code>&lt;head&gt;</code> of all 3 of my HTML documents, I put a link to the file with: <code>&lt;link rel="icon" type="image/ico" href="images/favicon.ico"&gt;</code>. This website provides infomation on the different file types and sizes you can use: <a href="http://iconhandbook.co.uk/reference/chart/favicons/">The Icon Handbook</a>.<p>
+                <div class = "important">
+                <h4>Error - Missing externally hosted images</h4>
+                <p>When I loaded my webpage, I noticed that my background image that was hosted on an external website was not showing, even though I made sure that in the CSS the full URL to identify the image source was correct, and that the image could be found when I entered it's URL in my browser's address search.
+                <img src="images/httpsError.png" class = "img-wrap-right-large" alt="Word break after change"/>
+                <p>When I opened the Chrome developer tools, I saw the warning message seen here to the left.</p>
+                <div class = "clear"></div>
+                <p>This meant the request to get it was upgraded from the insecure HTTP, to HTTPS because I loaded my webpage with HTTPS (which is done by default when typing my webpage's URL without specifying the protocol). So the image was not found because it can only be found with HTTP, by my testing in the URL seach bar. When I loaded my webpage specifying with only HTTP, the image as I expected was showing, because the request to find it was not automatically upgraded to HTTPS.</p>
+                <p>Becuase most visiters to my webpage won't specify the protocol, I decided to download the image and uploaded it to my images folder. I then identify the image souce from there, so that the image would always be displayed for everyone.</p>
+                </div>                
+                <div class="important">
+                <h4>Independent research - Smooth scrolling</h4>
+                <p>This page on <a href="https://www.w3schools.com/howto/howto_css_smooth_scroll.asp">w3schools</a> gave me infomation on how to create a smooth scrolling effect with CSS. When I added the property <code>scroll-behavior: smooth</code> to the <code>&lt;html&gt;</code> element, smooth scrolling was enabled for the whole page. This meant that instead of a straight jump, when the user clicks on a link within my website (such as the navigation list), there is a smooth animation of scrolling to the selected position.</p>
+                </div>
+                <p><a href="#top">Back to top of page</a></p>
+        	</article>
+        	
+        	<article>
+        	    <header class="post">
+        	        <h3><a id="week6"></a>Week 6 - Implementing Responsive Web Design</h3>
+					<p>Posted on <time datetime="2023-11-11"><strong>November 11, 2023</strong></time></p>
+        	    </header>
+        	    <h4>Using a CSS responsive grid layout</h4>
+        	    <p>I found out how to create a grid layout from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout#A_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas">MDN A responsive layout with 1 to 3 fluid columns</a>.</p>
+        	    <div class ="important">
+        	    <h4>Independent research - Finding a colour scheme</h4>
+        	    <p>It is important to use a colour scheme for your webpage where the colours complement each other and look nice for the reader. I used this website: <a href="https://coolors.co/">https://coolors.co/</a> to generate a palette of colours. These 5 colours can be seen <a href="https://coolors.co/d6ff79-b0ff92-fff2f1-a09be7-5f00ba">here</a>, and this website provides the hex or rgb values that can be copied into your CSS to style certain elements of your page.</p>
+        	    </div>
+        	    <p><a href="#top">Back to top of page</a></p>
+        	</article>
+       <article>
+           
+        	 <header class="post">
+        	        <h3><a id="week5"></a>Week 4 & 5 - Learning and adding to CSS</h3>
+					<p>Posted on <time datetime="2023-11-04"><strong>November 4, 2023</strong></time></p>
+        	  </header>
+        	  
+        	  <h4>Styling paragraphs</h4>
+        	  <p class="dropcap">Here's an example of using a drop cap. I'm not going to be using any more of these in my website as they dont look that good unless they are in a something like a newspaper
+        	  with a large paragraph of text. To do this I added a class attribute to this very paragraph and then added a new rule to the stylesheet which styles the first letter of this specific 
+        	  paragraph differenty from the rest.</p>
+        	  <h4>Making text wrap around an image</h4>
+        	  <div class="floatleft"><img src="images/week5screenshot1.png" alt="Screenshot of webpage before wrap" width="500" height="300"></div>
+        	  <p>To the left is a screenshot of my web page from week 3 where I used an image of the HTML5 logo. Here next to the image is huge area of blank space where there could be text.</p>
+        	  <p>So I used the CSS <code>float</code> and <code>clear</code> properties to lay out the image on the page so that the text wraps around it on the left.</p>
+        	  <p class="clear"></p>
+        	  <div class="floatright"><img src="images/week5screenshot2.png" alt="Screenshot of webpage after wrap" width="500" height="300"></div>
+        	  <p>To do this I nested the image in a <code>&lt;div&gt;</code> element with the class attribute <code>'floatright'</code>. Text was then entered in the following line's <code>&lt;p&gt;</code> 
+        	  paragraph, and the next <code>&lt;p&gt;</code>, which is where the wrapping text would end, was given the class attribute <code>'clear'</code> in order to end the float. In the CSS I then 
+        	  made rules using the class selectors <code>.fltlt </code> and <code>.clear</code>.</p>
+        	  <p>To the right is an after screenshot with the result. As you might have seen, I have also made the recent text wrap around the screenshots both to the right and left</p>
+        	  <p class="clear"><a href="#top">Back to top of page</a></p>
+        	  
+       </article>
+        	
+	<article>
+	    				<header class="post">
+					<h3><a id="week3"></a>Week 3 - Learning about lists and tables</h3>
+					<p>Posted on <time datetime="2023-10-21"><strong>October 21, 2023</strong></time></p>
+    			</header>
+
+			<h4>Nesting an unordered list within an ordered list</h4>
+
+			<ol>
+<!--Ordered (numbered) list -->
+				<li>Week 1
+					<ul>
+        			<!--Nested unordered list -->
+						<li>Set up site folder</li>
+						<li>Create index.html</li>
+						<li>Create about.html</li>
+						<li>Link files using alists for the navigation</li>
+					</ul>
+					</li>
+						<li>Week 2
+  					<ul>
+  						<li>Add posts and date</li>
+  						<li>Add named anchors</li>
+  					</ul>
+				</li>
+			</ol>
+
+	    <h4>Description list</h4>
+		<dl>
+<!--Description list -->
+  		<dt><strong>HTML</strong></dt>
+			<dd>Hyper-text markup language - the <i>lingua franca</i> of the web</dd>
+		<dt><strong>CSS</strong></dt>
+			<dd>Cascading stylesheets - used to tell browsers how to display HTML elements</dd>
+		<dt><strong>JavaScript</strong></dt>
+			<dd>Scripting language for adding interactive behaviour to web pages</dd>
+		</dl>
+		<p>  description lists -  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl">research link</a> </p>
+			    <h4>Quoting text</h4>
+			    
+			    
+<p>The W3C defines HTML and CSS as follows:</p>
+
+<blockquote>
+
+<p>HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets) are two of the core technologies for building Web pages. HTML provides the structure of the page, CSS the (visual) layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages...<p>
+
+
+<cite>
+<a href="http://www.w3.org/standards/webdesign/htmlcss">W3C standards for web design</a>
+</cite>
+
+
+</blockquote>
+
+<p>In the first 3 lab tutorials I learned some of the most frequently used HTML tags and how to use them to structure text in a web page.</p>
+	    
+<p>
+    For more information about when and why to use the citation element cite see this web page - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite">researchlink</a>
+</p>
+<h4>Putting a link in an image</h4>
+            <div class="floatright">
+		    <a href="http://www.w3.org/html/logo/">
+    		<img src="images/HTML5logoBlack.png" alt="HTML5 logo" width="300" height="300"></a>
+    		</div>
+    <p>The W3C has made an HTML5 logo that you can add to your web page. The HTML5 logo is licensed under
+    <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> and is free to use.</p>
+    
+    <p>I found out about the terms of the Creative Commons licesnse through the link: <a href="http://creativecommons.org/licenses/by/3.0/">link</a></p>
+	
+	<p class="clear"><a href="#top">Back to top of page</a></p>
+   
+    <p>When using the validator it complians about the border of the table, by saying to use CSS instead. This will be solved in the weeks coming up</p>
+
+	
+	</article>
+			
+    	<article>
+			<header class="post">
+			<h3><a id="week1"></a>Week 1 & 2 - Getting started and learning about HTML elements</h3>
+								<p>Published on <time datetime="2023-10-14"><strong>October 14, 2023</strong></time></p>
+			</header>
+				
+			<p>I finished the first lab tutorial and ended up with a basic 3-page 'website'.  In this tutorial I learned how to do the following things -</p>
+			<p>I learned to -</p>
+            <ol>
+			  <li>Set up  the folders and files for my site on my <em>workspace</em> on the Brighton Domains web server</li>
+  				<li>Link two pages together with a navigation menu (relative link)</li>
+  				<li>Create links to external webistes (absolute link)</li>
+  				<li>Use <code>h1</code> and <code>h2</code> tags</li>
+  				<li>Edit the page title</li>
+  				<li>Validate <strong>HTML</strong> using the <em>W3C</em> validator</li>
+ 		 	</ol>
+ 		 	
+ 		 	<figure><img src="images/webfolder.png"  alt="Website folders">
+  				<figcaption>Website folder structure<br />
+					<small>Screenshot &copy; BM</small>
+				</figcaption>
+			</figure>
+ 		 	
+ 		 <p><a href="#top">Back to top of page</a></p>
+        
+		</article>
+    </main><!--Close main page content --> 
+        
+        <aside>
+        	<h2><a id="refs"></a>References</h2>
+            	<ol>
+                <li><a href="http://validator.w3.org/">W3C markup validation service</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN HTML Element Index</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl">MDN description list</a></li>
+                <li><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons license</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout#A_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas">MDN A responsive grid layout</a></li>
+                <li><a href="https://coolors.co/">Coolors - the super fast color schemes generator</a></li>
+        	    <li><a href="http://www.stripegenerator.com/">Stripe Generator tool</a></li>
+        	    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">MDN backgrounds</a></li>
+        	    <li><a href="https://uxplanet.org/web-usability-what-is-favicon-and-how-it-improves-your-website-c94d9be71a59">Web Usability: What Is Favicon and How It Improves Your Website</a></li>
+        	    <li><a href="http://tools.dynamicdrive.com/favicon/">FavIcon Generator</a></li>
+        	    <li><a href="http://iconhandbook.co.uk/reference/chart/favicons/">The Icon Handbook</a></li>
+        	    <li><a href="http://www.favicon.cc/">favicon.cc Generator</a></li>        	    
+        	    <li><a href="https://www.w3schools.com/howto/howto_css_smooth_scroll.asp">w3schools - How to create a smooth scrolling effect</a></li>
+        	    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break">MDN Web Docs - word break</a></li>
+        	    <li><a href="https://www.smashingmagazine.com/2016/10/designing-card-based-user-interfaces/">SmashingMagazine - Designing Card-Based User Interfaces</a></li>
+        	    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">MDN - Basic concepts of flexbox</a></li>
+        	    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts">MDN - Using CSS multi-column layout</a></li>
+        	    <li><a href="http://24ways.org/2009/have-a-field-day-with-html5-forms">24 WAYS - Have a Field Day with HTML5 Forms</a></li>
+        	    <li><a href="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons/">Web Design - Easy CSS3 Checkboxes and Radio Buttons</a></li>
+                </ol>
+        </aside>
+
+
+	
+	
+		<!--
+		<div class="attribution">
+		  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		  Coded by <a href="#">Your Name Here</a>.
+		</div>-->
+	
+    
+        
+
+ <footer>
+		<!-- Footer content  -->
+		<small>&copy; 2021, Bleak14midwinter <a href="#">contact us </a></small>
+	</footer>
+
+	</div><!--Close 'wrapper' div -->
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->

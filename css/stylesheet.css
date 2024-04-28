@@ -1,0 +1,459 @@
+/*---------------------------
+Base styles for all screen widths
+----------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*sections------------------------------------------------------------------- */
+body {
+  word-break: break-word;
+  background-color: #F0F0F0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 20px;
+}
+#wrapper, #wrapperGrid {
+  max-width: 1250px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #FFF2F1;
+  padding-right: 10px;
+  padding-left: 10px
+}
+footer {
+    color: white;
+	background: #5F00BA;
+	padding: 1em 1.25em 1em 1.25em;
+}
+.post	{
+    margin-top: 2px;
+	margin-bottom: 2px;
+	background-color: #D6FF79;
+	padding-left: 10px;
+}
+.banner{
+    background: #B0FF92;
+}
+.important{
+    background: #FFD9D6;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*headings------------------------------------------------------------------- */
+h1	{
+  font-family: 'Roboto Slab', sans-serif;
+  color: #A09BE7;
+  text-align: center;
+}
+h2	{
+ font-family: 'Roboto Slab', sans-serif;
+ color: #A09BE7;
+}
+h3 	{
+ font-family: 'Roboto Slab', sans-serif;
+}
+/*grouping------------------------------------------------------------------- */
+p	{
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 15px 0 15px 0;
+  text-indent: 0;
+  text-align: justify;
+}
+p.dropcap:first-letter	{
+  float: left;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #423232;
+  font-size: 4.5em;
+  line-height: 0.3;
+  margin: 9px 4px 0 0;
+}
+.floatleft {
+ float: left;
+ margin-right: 8px;
+}
+.floatright {
+ float: right;
+ margin-left: 8px;
+}
+.clear {
+ clear: both;
+}
+.background-tiled {
+	color: #FFFFDC;
+	background-color: #666; /*fallback - solid colour*/
+	background-image: url(../images/stripe.png);
+	/*background-image: url(http://www.stripegenerator.com/generators/generate_shared_stripe.php?stripe=3026);*/
+	padding: 10px;
+}
+.background-fixed {
+    color: #de3a6b;
+	background-image: url(../images/rollercoaster.jpg);
+    background-attachment: fixed;
+	padding: 10px;
+
+}
+/*image----------------------------------------------------------------------- */
+.border	{
+  border: 2px ridge #B0FF92;
+}
+/*anchors--------------------------------------------------------------------- */
+a:link	{
+    color: #0090D2;
+}
+a:visited {
+    color: #0090D2;
+}
+a:hover {
+    color: #0063A6;
+    text-decoration: none;
+}
+a:active {
+    color: #0090D2;
+}
+.menu	{
+    color: grey;
+    list-style-type: none;
+	margin-left: 0;
+	margin-bottom: 25px;
+	background: #5F00BA;
+}
+.menu a {
+	color: white;
+	padding: 5px;
+	text-decoration: none;
+}
+.menu a:hover {
+	background-color: #931FFF;
+}
+/*tables---------------------------------------------------------------------- */
+table {
+	border-spacing: 0;
+	border-top: 1px solid #ddd;
+}
+th, td {
+	font-size: 90%;
+	border: 1px solid #ddd;
+	vertical-align: top;
+	text-align: left;
+	white-space: nowrap;
+}
+caption	{
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 1.2em 0 .5em 0;
+	text-transform: uppercase;
+}
+
+
+/* -----------------------
+Grid layout
+------------------------*/
+.banner {grid-area: banner;}
+.menu {grid-area: menu;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+aside {grid-area: aside;}
+table {grid-area: table;}
+footer {grid-area: footer;}
+
+#wrapper, #wrapperGrid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+   "banner"
+   "menu"
+   "nav"
+   "main"
+   "aside"
+   "table"
+   "footer";
+}
+
+@media (min-width: 750px) {
+  #wrapperGrid {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      "banner  banner"
+      "menu  menu"
+      "nav  main"
+      "aside  table"
+      "footer  footer";
+  }
+}
+
+ @media (min-width: 1000px) {
+  #wrapperGrid {
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+      "banner  banner  banner"
+      "menu  menu  menu"
+      "nav  main  aside"
+      "nav  table  aside"
+      "footer  footer  footer";
+   }
+}
+
+
+/* --------------------------
+Layout Styles - mobile first
+----------------------------*/
+.banner {
+	padding: 1em 0 1em 1.25em;
+}
+.menu {
+	padding: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+main {
+	margin: 0 1em 0 1em;
+}
+h1	{
+  font-size: 1.9em;
+  line-height: 1.8;
+}
+h2	{
+ font-size: 1.4em;
+ line-height: 1.5;
+}
+h3 	{
+ font-size: 1.1em;
+ line-height: 1.4
+}
+h4  {
+ font-size:1em;
+ line-height: 1.35;
+}
+body  {
+ font-size: 0.95em;
+ line-height: 1.3;
+}
+.menu  {
+  font-size: 0.85em;
+}
+.img-clipped {
+  overflow: hidden;
+}
+.img-fluid {
+  width: 100%;
+  max-width: 900px; /*max-width measurement should be the actual width of your image*/
+}
+.img-wrap-left-small {
+  float: left;
+  padding: 2%;
+  width: 33%; /*image 1/3 width of the element*/
+}
+.img-wrap-left-large {
+  float: left;
+  padding: 2%;
+  width: 66%; /*image 2/3 width of the element*/
+}
+.img-wrap-right-small {
+  float: right;
+  padding: 2%;
+  width: 33%; /*image 1/3 width of the element*/
+}
+.img-wrap-right-large {
+  float: right;
+  padding: 2%;
+  width: 66%; /*image 2/3 width of the element*/
+}
+.clear {
+  clear: both;
+}
+
+/**Makes images 100% width of containing element i.e. flexible
+*Only works when image width and height attributes are removed from html
+*Images used in responsive web pages should be the largest/highest resolution they will be displayed in the desktop version of the page
+*- but no larger
+*Don't use larger than necessary, high resolution images; edit them in an image editor (e.g. Photoshop) to be the required size. */
+img { max-width: 100%; }
+
+/* Flexible video
+================================= */
+.video-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+iframe	{
+  width: 100%;
+  height: auto;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /*16:9 */
+  height: 0; 
+}
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* -----------------------------------------------
+Menu Navigation - vertical layout for smaller screens
+--------------------------------------------------*/
+.menu ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu li
+{
+	display: block; /*display in a vertical column*/
+	margin: 0;
+	padding: .7em 1.25em .7em 1.25em;
+	text-decoration: none;
+	border-bottom: 1px solid gray;
+}
+
+
+/* ----------------------------------------------------
+Wider screens - i.e. desktop, laptop, tablet landscape
+-------------------------------------------------------*/
+@media (min-width: 750px)
+{
+.banner {
+    padding: 0 0 0 3em;
+}
+h1	{
+  font-size: 2.9em;
+  line-height: 3;
+}
+h2	{
+ font-size: 2.1em;
+ line-height: 1.8;
+}
+h3 	{
+ font-size: 1.4em;
+ line-height: 1.65;
+}
+h4  {
+ font-size:1.05em;
+ line-height: 1.45;
+}
+body {
+ font-size: 0.975em;
+ line-height: 1.4;
+}
+/* Menu navigation - inline layout for wider screens */	
+.menu {
+    padding: 1em 0 1em 3em;
+    font-size: 1.2em;
+}
+.menu li {
+    display: inline;
+    border-bottom: 0;
+}
+}
+
+
+/* ----------------------------------------------------
+Mobile
+-------------------------------------------------------*/
+/*Timtable not displayed on small width screens*/
+@media (max-width: 550px) {
+ table {
+  display:none;
+ }
+}
+
+
+/* ----------------------------------------------------
+Tutorial page flexbox
+-------------------------------------------------------*/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.card-small, .card-medium, .card-large{
+  display: flex; 
+}
+.card-content {
+  flex-direction: column;
+  width: 100%;
+  border: 3px groove #D6FF79;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0.8em 0.6em 0.8em 0.6em;
+  padding: 1em;
+}
+
+/*640 px - tablet portrait orientation - 2 columns*/
+@media (min-width: 750px){
+  .card-small, .card-medium { width: 50%; }
+}
+/*960 px* - tablet landscape orientation and above - 3 columns*/
+@media (min-width: 1000px) {
+  .card-small { width: 25%; }
+  .card-medium { width: 50%; }
+}
+
+
+/* ----------------------------------------------------
+Contact page form
+-------------------------------------------------------*/
+form {
+	width: 80%;
+	padding: .7em;
+	border: 3px solid #D6FF79;
+	margin: 1.2em;
+}
+fieldset {
+	border: 2px dotted #FFD9D6;
+	margin-bottom: 1.2em;
+	padding: .6em .6em .7em .6em;
+}
+legend {
+	padding: .4em;
+}
+label {
+	display: block;
+	cursor: pointer;
+	padding: .4em 0 .4em 0;
+}
+input {
+	display: block;
+	width: 98%;
+	height: 2em;
+	padding: .1em;
+}
+input[type="radio"] {
+	width: auto;
+	margin-right: 1em;
+	padding: .5em .5em 0 .5em;
+}
+input[type="submit"], input[type="reset"] {
+    display: inline;
+	text-align: center;
+	width: auto;
+	border: 1px solid #333;
+	border-radius: 3px;
+	transition: all 5s ease-in-out;
+	margin-right: 2em;
+}	
+textarea  {
+    width: 98%;
+    height: 7em;
+}
+#date	{
+	width: 50%;
+    margin-bottom: 15px;
+}
+#color	{
+	width: 25%;
+	margin-bottom: 15px;
+}
+#number	{
+	width: 25%;
+	margin-bottom: 15px;
+}
